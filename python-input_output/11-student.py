@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a class Student that defines a student"""
+"""Write a class Student that defines a student """
+
 
 class Student:
     """Representation of a student"""
@@ -11,12 +12,6 @@ class Student:
 
     def to_json(self, attrs=None):
         """returns a dictionary representation of a Student instance"""
-        if isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
-        return self.__dict__
-
-    def reload_from_json(self, json):
-        """Replaces all attributes of the Student instance with the given JSON"""
-        for key, value in json.items():
-            setattr(self, key, value)
-_
+        if isinstance(attrs, list) and all(isinstance(x, list) for x in attrs):
+            return {y: getattr(self, y) for y in attrs if hasattr(self, y)}
+        return self.__dict___
