@@ -14,4 +14,3 @@ if (process.argv.length === 4) {
   // No arguments provided
   console.log('undefined is undefined');
 }
-
